@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+{% block content2 %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brain Tumor Classification App</title>
+    <style>
+      h1 {
+        font-size: 3rem;
+        margin: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .card {
+        border-radius: 0.5rem;
+        width: calc(33.33% - 20px);
+      /* margin-bottom: 20px;*/
+       background-color: #BFDCE5;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+       text-align: center;
+       padding: 20px;
+
+}
+
+      .card img {
+        object-fit: cover;
+        height: 200px;
+        width: 100%;
+      }
+
+      .card h2 {
+        font-size: 1.5rem;
+        margin: 10px;
+      }
+
+      .card p {
+        font-size: 1.2rem;
+        margin: 10px;
+      }
+
+.classify-btn {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/*.classify-btn a {
+        background-color: #005f99;
+        border-radius: 4px;
+        /*color: #fff;*//*
+        cursor: pointer;
+        font-size: 1.2rem;
+        margin: 5px;
+        padding: 5px;
+        /*transition: background-color 0.3s ease-in-out;*//*
+}*/
+/*.classify-btn a:hover {
+  background-color: #042b44;
+}*/
+button{
+	background-color: #3E54AC;
+	color: white;
+	padding-top: 1rem;
+	padding-right: 2rem;
+	padding-bottom: 1rem;
+	padding-left: 2rem;
+	font-size: 1rem;
+	border-style: solid;
+	border-color: rgb(0, 0, 0);
+	border-radius: 0.5rem;
+	box-shadow: 0px/*x*/ 5px/*y*/ 24px/*blur*/ rgb(0, 0, 0);
+	margin: 2rem;
+	text-align: center;
+}
+button :hover{
+  color:  white;
+}
+a {
+  color: #EEEEEE;
+}
+    </style>
+  </head>
+  <body>
+     <!-- Home Page Content -->
+  <section class="home">
+    <div class="content">
+      <h1>Brain Tumor Classification</h1>
+      <p>Classify brain tumors into 4 categories: glioma, meningioma, no tumor, and pituitary.</p>
+    </div>
+  </section>
+
+  <div class="bigcontainer">
+    <div class="container">
+      <div class="card">
+        <img src="Te-me_0010.jpg" alt="Brain Tumor Image 1">
+        <h2>Meningioma</h2>
+        <p>Meningiomas account for about 1 in 3 primary brain tumors.</p>
+      </div>
+      <div class="card">
+        <img src="970586.fig.008a.jpg" alt="Brain Tumor Image 2">
+        <h2>Glioma</h2>
+        <p>Gliomas are the most common type of primary brain tumor.</p>
+      </div>
+      <div class="card">
+        <img src="Te-pi_0016.jpg" alt="Brain Tumor Image 3">
+        <h2>Pituitary</h2>
+        <p>Pituitary account for about 1 in 10 brain tumors.</p>
+      </div>
+      <button class="classify-btn"><a href="/classify_image/">Classify Now</a></button>
+    </div>
+  </div>
+  
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Brain Tumor Classification. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
+
+{% endblock content2 %}

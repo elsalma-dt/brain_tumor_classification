@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+<style>
+   
+	body{
+	overflow-x: hidden;
+	/*padding-top: 25vh;
+	font-family: "argonite", sans-serif;
+	text-shadow: 0px/*x*/ /*4px/*y*//* 12px/*blur*/ /*rgba(0, 0, 0, 0.49);
+	text-align: center;*/
+}
+input{
+	text-align: center;
+}
+	:root{
+	--mycolor: #2b4389;
+   }
+   button{
+	background-color: var(--mycolor);
+	color: white;
+	padding-top: 1rem;
+	padding-right: 2rem;
+	padding-bottom: 1rem;
+	padding-left: 2rem;
+	font-size: 1rem;
+	border-style: solid;
+	border-color: rgb(0, 0, 0);
+	border-radius: 0.5rem;
+	box-shadow: 0px/*x*/ 5px/*y*/ 24px/*blur*/ rgb(0, 0, 0);
+	margin: 2rem;
+	text-align: center;
+}
+   input{
+	background-color: rgba(0, 0, 0, 0.533);
+	color: white;
+	padding: 0.5rem;
+	font-size: 1rem;
+	text-align: center;
+   }
+   h1, label, form{
+	text-align: center;
+}
+h1{
+	color: #EEEEEE;
+	font-family: Alkatra;
+}
+</style>
+
+<h1>Tumors classification</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="image"><h3>Choose an image:</h3></label><br>
+    <input type="file" name="image" accept="image/*"><br><br>
+    <button type="submit" class="btn btn-primary">Classify</button>
+</form>
+
+{% if prediction %}
+    <h2>Prediction:</h2>
+    <p>{{ prediction }}</p>
+{% endif %}
+
+
+
+
+
+
+
+</body>
+
+{% endblock %}
