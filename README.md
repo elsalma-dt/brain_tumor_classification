@@ -14,4 +14,4 @@ Architecture: Four convolutional layers with the activation function RELU, follo
 - **Accuracy**: 0.96
 - **Recall**: 0.96
 - **Precision**: 0.96
-- **F1-Score**: 0.96# brain_tumor_classification
+- **F1-Score**: 0.96
